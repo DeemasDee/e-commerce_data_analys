@@ -24,7 +24,7 @@ import streamlit as st
 
 
 # Set page title
-st.title('E-Commerce Data Analysis')
+#st.title('E-Commerce Data Analysis')
 
 # Available datasets
 datasets = [
@@ -41,21 +41,21 @@ datasets = [
 
 #  Printig informations
 for dataset in datasets:
-    #print(f"\n\nDataset: {dataset}")
-
-    #df = pd.read_csv(dataset)
-
-    # Display
-    #display(df.head(10))
-
-    # List columns
-    #print("\nKolom:", df.columns.tolist())
-
+    print(f"\n\nDataset: {dataset}")
 
     df = pd.read_csv(dataset)
-    st.write(df.head(10))
-    st.write("Kolom:", df.columns.tolist())
-    st.write("---")
+
+    # Display
+    display(df.head(10))
+
+    # List columns
+    print("\nKolom:", df.columns.tolist())
+
+
+    #df = pd.read_csv(dataset)
+    #st.write(df.head(10))
+    #st.write("Kolom:", df.columns.tolist())
+    #st.write("---")
 
 """**General Data Pre-processing**"""
 
