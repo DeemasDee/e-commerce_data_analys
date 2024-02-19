@@ -22,6 +22,10 @@ from statsmodels.tsa.stattools import adfuller
 import display
 import streamlit as st
 
+
+# Set page title
+st.title('E-Commerce Data Analysis')
+
 # Available datasets
 datasets = [
     "customers_dataset.csv",
@@ -37,15 +41,21 @@ datasets = [
 
 #  Printig informations
 for dataset in datasets:
-    print(f"\n\nDataset: {dataset}")
+    #print(f"\n\nDataset: {dataset}")
 
-    df = pd.read_csv(dataset)
+    #df = pd.read_csv(dataset)
 
     # Display
-    display(df.head(10))
+    #display(df.head(10))
 
     # List columns
-    print("\nKolom:", df.columns.tolist())
+    #print("\nKolom:", df.columns.tolist())
+
+
+    df = pd.read_csv(dataset)
+    st.write(df.head(10))
+    st.write("Kolom:", df.columns.tolist())
+    st.write("---")
 
 """**General Data Pre-processing**"""
 
